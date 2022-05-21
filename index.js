@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 
 const port = 3000;
 const server = app.listen(port, () => {
-        console.log('listening on port %s.\n', server.address().port);
+        console.log('App is listening on port %s.\n', server.address().port);
     });
 
 module.exports = app;
