@@ -26,6 +26,9 @@ steps:
 - name: node
   entrypoint: npm
   args: ['run', 'build']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'bash'
+  args: ['-c', 'gcloud config set app/sample_node 1600 && gcloud app deploy']
 options:
   logging: CLOUD_LOGGING_ONLY
 # [END cloudbuild_npm_node]
